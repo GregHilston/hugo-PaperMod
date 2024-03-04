@@ -34,6 +34,25 @@
   {{- partial "toc.html" . }}
   {{- end }}
 
+  <!-- GregHilston custom modification to display information if post is in a series-->
+  <!-- This goes above our content. From https://npf.io/2014/08/making-it-a-series/ -->
+  {{ if .Params.series }}
+    {{ $name := index .Params.series 0 }}
+    <hr/>
+    <p><a href="" id="series"></a>This is a post in the
+    <b><a href="{{.Site.BaseURL}}/series/{{$name | urlize}}">{{$name}}</a></b> series:<br></p>
+
+    {{ $name := $name | urlize }}
+    {{ $series := index .Site.Taxonomies.series $name }}
+    <ul class="series">
+        {{ range $series.Pages }}
+            <li>{{.Date.Format "Jan 02, 2006"}} -
+            <a href="{{.Permalink}}">{{.LinkTitle}}</a></li>
+        {{end}}
+    </ul>
+    <br>
+  {{end}}
+
   {{- if .Content }}
   <div class="post-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
@@ -43,6 +62,24 @@
   {{- end }}
 
   <footer class="post-footer">
+    <!-- GregHilston custom modification to display information if post is in a series-->
+    <!-- This goes below our content. From https://npf.io/2014/08/making-it-a-series/ -->
+    {{ if .Params.series }}
+      {{ $name := index .Params.series 0 }}
+      <hr/>
+      <a href="" id="series"></a>This is a post in the
+      <b><a href="{{.Site.BaseURL}}/series/{{$name | urlize}}">{{$name}}</a></b> series:<br/></p>
+
+      {{ $name := $name | urlize }}
+      {{ $series := index .Site.Taxonomies.series $name }}
+      <ul class="series">
+          {{ range $series.Pages }}
+              <li>{{.Date.Format "Jan 02, 2006"}} -
+              <a href="{{.Permalink}}">{{.LinkTitle}}</a></li>
+          {{end}}
+      </ul>
+    {{end}}
+
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
       {{- range ($.GetTerms $tags) }}
