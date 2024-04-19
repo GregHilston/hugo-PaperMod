@@ -1,0 +1,167 @@
+.admonition {
+  border-radius: 6px;
+  position: relative;
+  margin: 1.7rem 0;
+  padding: 0 .75rem;
+  background-color: #f0f0f0;
+  border-left: .25rem solid #4aa4f2;
+  overflow: auto;
+}
+
+.admonition p:first-child, .admonition ul:first-child {
+  margin-top: 0;
+}
+
+.admonition p:last-child, .admonition ul:last-child {
+  margin-bottom: 0;
+}
+
+.admonition-title {
+  font-weight: bold;
+  margin: 0 -0.75rem;
+  padding: .25rem 1.8rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: black
+}
+
+.admonition-title-none {
+  display: none;
+}
+
+.admonition.open .admonition-title {
+  background-color: #f0f0f0;
+}
+
+.admonition-content {
+  padding: .5rem 0;
+  color: black;
+}
+
+i.icon {
+  font-size: 0.85rem;
+  color: #4aa4f2;
+  position: absolute;
+  top: .6rem;
+  left: .5rem;
+}
+
+i.details-icon {
+  color: #4aa4f2;
+  position: absolute;
+  top: .55rem;
+  right: .3rem;
+}
+
+.admonition-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-image: url(/img/icon/admonition.svg);
+}
+
+.icon-note {
+  background-position: 0;
+}
+
+.icon-abstract {
+  background-position: -23px 0;
+}
+
+.icon-info {
+  background-position: -46px;
+}
+
+.icon-tip {
+  background-position: -64px;
+}
+
+.icon-success {
+  background-position: -84px;
+}
+
+.icon-question {
+  background-position: -106px;
+}
+
+.icon-warning {
+  background-position: -129px;
+}
+
+.icon-failure {
+  background-position: -152px;
+}
+
+.icon-danger {
+  background-position: -170px;
+}
+
+.icon-bug {
+  background-position: -190px;
+}
+
+.icon-example {
+  background-position: -210px;
+}
+
+.icon-quote {
+  background-position: -233px;
+}
+
+.admonition-icon-arrow-right {
+  background-position: -253px;
+}
+
+.admonition.note {
+  border-left-color: #4aa4f2;
+}
+
+.admonition.note i.icon {
+  color: #4aa4f2;
+}
+
+.admonition.note i.details-icon {
+  color: #4aa4f2;
+}
+
+.admonition.note {
+  background-color: #f0f0f0;
+}
+
+.admonition.note .admonition-title {
+  border-bottom-color: #f0f0f0;
+  background-color: rgba(240, 240, 240, 0.15);
+}
+
+.admonition.note.open .admonition-title {
+  background-color: #f0f0f0;
+}
+
+.admonition.success {
+  border-left-color: #79c267;
+}
+
+.admonition.success i.icon {
+  color: #79c267;
+}
+
+.admonition.success i.details-icon {
+  color: #79c267;
+}
+
+.admonition.success {
+  background-color: #f7faf5;
+}
+
+.admonition.success .admonition-title {
+  border-bottom-color: #f7faf5;
+  background-color: rgba(247, 250, 245, 0.15);
+}
+
+.admonition.success.open .admonition-title {
+  background-color: #f7faf5;
+}
+
+.admonition:last-child {
+  margin-bottom: .75rem;
+}
