@@ -61,6 +61,15 @@
   </div>
   {{- end }}
 
+  <!-- GregHilston custom modification to display information if post is in a series-->
+  <!-- This goes above bellow our content. From https://discourse.gohugo.io/t/correct-way-to-embed-mermaid-js/43491/10 -->
+  {{ if .Page.Store.Get "hasMermaid" }}
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  {{ end }}
+
   <footer class="post-footer">
     <!-- GregHilston custom modification to display information if post is in a series-->
     <!-- This goes below our content. From https://npf.io/2014/08/making-it-a-series/ -->
