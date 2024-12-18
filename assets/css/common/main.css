@@ -64,3 +64,44 @@ div.highlight:hover .copy-code,
 pre:hover .copy-code {
     display: block;
 }
+
+.series-badges {
+  margin: 1rem 0;
+}
+
+.series-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin-right: 0.5rem;
+  background: #f0f0f0;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.series-navigation {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.series-section {
+  margin-bottom: 1.5rem;
+}
+
+.series-section:last-child {
+  margin-bottom: 0;
+}
+
+.series-section h5 {
+  margin-bottom: 0.5rem;
+}
+
+.series-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.series-list li {
+  margin-bottom: 0.25rem;
+}
