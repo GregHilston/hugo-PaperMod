@@ -36,7 +36,7 @@
 
   <!-- GregHilston custom modification to display information if post is in a series-->
   <!-- This goes above our content. From https://npf.io/2014/08/making-it-a-series/ -->
-  {{ if .Params.series }}
+  <!-- {{ if .Params.series }}
     <div class="series-navigation">
       <h4>Read more in these series:</h4>
       {{ range .Params.series }}
@@ -54,7 +54,7 @@
         </div>
       {{end}}
     </div>
-  {{end}}
+  {{end}} -->
 
   {{- if .Content }}
   <div class="post-content">
@@ -78,7 +78,7 @@
     <!-- This goes below our content. From https://npf.io/2014/08/making-it-a-series/ -->
     {{ if .Params.series }}
       <div class="series-navigation">
-        <h4>Read more in these series:</h4>
+        <h4>This post is part of a series:</h4>
         {{ range .Params.series }}
           {{ $name := . }}
           <div class="series-section">
